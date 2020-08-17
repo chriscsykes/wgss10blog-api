@@ -6,6 +6,11 @@ const PostModelSchema = new Schema({
   tags: String,
   content: String,
   coverUrl: String,
+  authorName: String,
+  author: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
 }, {
   toObject: { virtuals: true },
   toJSON: { virtuals: true },
