@@ -4,6 +4,7 @@ import cors from 'cors';
 import path from 'path';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import apiRouter from './router';
 
 // DB Setup
@@ -14,6 +15,8 @@ mongoose.Promise = global.Promise;
 
 // initialize
 const app = express();
+
+dotenv.config({ silent: true });
 
 // enable/disable cross origin resource sharing if necessary
 app.use(cors());
