@@ -4,7 +4,7 @@ import mongoose, { Schema } from 'mongoose';
 const PostModelSchema = new Schema({
   title: String,
   tags: String,
-  image: String,
+  preview: String,
   content: String,
   coverUrl: String,
   authorName: String,
