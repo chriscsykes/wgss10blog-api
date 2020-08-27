@@ -6,6 +6,7 @@ export const createPost = (req, res) => {
   post.title = req.body.title;
   post.tags = req.body.tags;
   post.author = req.user;
+  post.image = req.image;
   post.content = req.body.content;
   post.coverUrl = req.body.coverUrl;
   post.authorName = req.body.authorName;
@@ -23,7 +24,7 @@ export const getPosts = (req, res) => {
   Post.find().then((result) => {
     res.json(result.map((post) => {
       return {
-        id: post._id, title: post.title, tags: post.tags, coverUrl: post.coverUrl, author: post.authorName,
+        id: post._id, title: post.title, tags: post.tags, image: post.image, coverUrl: post.coverUrl, author: post.authorName,
       };
     }));
   }).catch((error) => {
