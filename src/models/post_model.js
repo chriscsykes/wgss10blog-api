@@ -6,6 +6,7 @@ const PostModelSchema = new Schema({
   tags: String,
   preview: String,
   content: String,
+  imageURL: String,
   coverUrl: String,
   authorName: String,
   author: {
